@@ -38,8 +38,8 @@ export default function Home() {
       <section className="px-8 md:px-16 pb-32 max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-8">
         <div className="md:col-span-8">
           <h1 className="font-serif text-4xl md:text-6xl lg:text-7xl leading-[1.1] md:leading-[1.05] tracking-tight text-charcoal">
-            We believe a wedding is <span className="italic text-clay">a day</span>,<br />
-            not a photoshoot. Be present.<br />
+            We believe a wedding is <span className="italic text-clay">a day</span>, <br />
+            not a photoshoot. Be present. <br />
             We'll handle the proof.
           </h1>
         </div>
