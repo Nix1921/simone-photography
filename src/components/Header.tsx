@@ -29,6 +29,15 @@ export default function Header() {
         >
           Contact
         </Link>
+        <a
+          href="https://www.instagram.com/simonejohnson.photography"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="hover:text-clay transition-colors"
+          aria-label="Instagram"
+        >
+          <span className="material-symbols-outlined text-lg">photo_camera</span>
+        </a>
       </nav>
       <div className="md:hidden">
         <span className="material-symbols-outlined text-charcoal">menu</span>
