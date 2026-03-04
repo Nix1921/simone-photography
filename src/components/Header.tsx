@@ -1,27 +1,38 @@
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 export default function Header() {
+  const location = useLocation();
+
   return (
-    <header className="flex items-center justify-between px-12 py-8 bg-transparent">
+    <header className="w-full px-8 md:px-16 py-8 flex justify-between items-baseline z-50">
       <div className="flex items-center gap-2">
-        <h2 className="font-serif text-2xl font-semibold tracking-tight uppercase">
-          <Link to="/" className="hover:text-clay transition-colors">Simone Johnson</Link>
-        </h2>
-      </div>
-      <nav className="flex items-center gap-12">
-        <Link to="/experience" className="text-xs uppercase tracking-[0.2em] font-medium hover:text-clay transition-colors">
-          Experience
+        <Link to="/" className="font-serif text-2xl tracking-tight font-medium hover:text-clay transition-colors">
+          Simone Johnson
         </Link>
-        <Link to="/portfolio" className="text-xs uppercase tracking-[0.2em] font-medium hover:text-clay transition-colors">
+      </div>
+      <nav className="hidden md:flex items-center gap-12">
+        <Link
+          to="/portfolio"
+          className={`text-[11px] uppercase tracking-[0.2em] font-medium hover:text-clay transition-colors ${location.pathname === '/portfolio' ? 'text-clay' : ''}`}
+        >
           Portfolio
         </Link>
-        <Link to="/contact" className="text-xs uppercase tracking-[0.2em] font-medium hover:text-clay transition-colors">
+        <Link
+          to="/experience"
+          className={`text-[11px] uppercase tracking-[0.2em] font-medium hover:text-clay transition-colors ${location.pathname === '/experience' ? 'text-clay' : ''}`}
+        >
+          Experience
+        </Link>
+        <Link
+          to="/contact"
+          className={`text-[11px] uppercase tracking-[0.2em] font-medium hover:text-clay transition-colors ${location.pathname === '/contact' ? 'border-b border-charcoal/10 pb-1' : ''}`}
+        >
           Contact
         </Link>
-        <Link to="/contact" className="bg-charcoal text-white text-[10px] uppercase tracking-[0.3em] px-8 py-3 hover:bg-clay transition-all">
-          Inquire
-        </Link>
       </nav>
+      <div className="md:hidden">
+        <span className="material-symbols-outlined text-charcoal">menu</span>
+      </div>
     </header>
   );
 }
