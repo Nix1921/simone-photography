@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /* Design System baseline from deliverable 08 */
+  * {
+    @apply border-none rounded-none;
+  }
+
+  body {
+    @apply bg-paper text-charcoal font-sans antialiased;
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 0;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif;
+  }
+
+  h1 {
+    @apply text-h1;
+  }
+
+  h2 {
+    @apply text-h2;
+  }
+
+  h3 {
+    @apply text-h3;
+  }
+}
+
+@layer components {
+  /* Primary CTA button - Design System from deliverable 07 */
+  .btn-primary {
+    @apply bg-charcoal text-paper font-sans text-button px-32 py-16 transition-colors duration-200;
+    min-height: 48px; /* Touch target size */
+  }
+
+  .btn-primary:hover {
+    @apply bg-clay;
+  }
+
+  /* Form inputs - Contact page from Stitch design */
+  .input {
+    @apply bg-paper border border-charcoal font-sans text-body px-16 py-16 w-full transition-colors;
+  }
+
+  .input:focus {
+    @apply outline-none border-clay;
+  }
+
+  /* Manifesto callout box - Experience page from Stitch design */
+  .manifesto-box {
+    @apply bg-clay/10 p-32;
+  }
+}
