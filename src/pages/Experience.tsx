@@ -2,79 +2,92 @@ import { Link } from 'react-router-dom';
 
 export default function Experience() {
   return (
-    <div className="min-h-screen pt-96 pb-96">
+    <div className="w-full max-w-[1440px] mx-auto px-12 pt-24 pb-32">
       {/* Page Title */}
-      <div className="px-16 md:px-64 mb-96">
-        <h1 className="font-serif text-[48px] md:text-[72px] leading-tight mb-48">Experience</h1>
+      <div className="ml-[20%] mb-32">
+        <h1 className="font-serif text-[120px] leading-none font-light italic opacity-90">Experience</h1>
       </div>
 
-      {/* Opening Statement - 40% width, left-aligned */}
-      <div className="px-16 md:px-64 mb-96">
-        <div className="md:w-2/5">
-          <p className="font-serif text-h1 md:text-[40px] md:leading-[1.4] italic mb-96">
-            "I don't carry a shot list. I carry a camera and an obsession with the truth."
-          </p>
+      {/* Opening Statement */}
+      <section className="mb-48 grid grid-cols-12">
+        <div className="col-span-12 md:col-span-5">
+          <h2 className="font-serif text-5xl leading-[1.1] italic font-medium">
+            I don't carry a shot list. I carry a camera and an obsession with the truth.
+          </h2>
         </div>
-      </div>
+        <div className="col-span-7"></div> {/* Negative Space */}
+      </section>
 
       {/* Three-Step Process */}
-      <div className="px-16 md:px-64 mb-96">
-        <div className="md:w-3/5 space-y-64">
-          {/* Step 1 */}
-          <div>
-            <div className="flex items-baseline gap-16 mb-16">
-              <span className="font-serif text-[72px] text-clay leading-none">01</span>
-              <h3 className="font-serif text-h2">The Vibe Check</h3>
-            </div>
-            <p className="font-sans text-body text-film-grey ml-[88px]">
-              We chat, see if we click. This isn't a vendor meeting — it's a conversation.
-            </p>
+      <section className="space-y-40 mb-56">
+        {/* Step 01 */}
+        <div className="grid grid-cols-12 items-start">
+          <div className="col-span-2">
+            <span className="font-serif text-7xl text-clay/40 font-bold leading-none">01</span>
           </div>
-
-          {/* Step 2 */}
-          <div>
-            <div className="flex items-baseline gap-16 mb-16">
-              <span className="font-serif text-[72px] text-clay leading-none">02</span>
-              <h3 className="font-serif text-h2">The Unscripted Day</h3>
-            </div>
-            <p className="font-sans text-body text-film-grey ml-[88px]">
-              I show up, you get married, I capture the truth. No poses. No performance.
-            </p>
-          </div>
-
-          {/* Step 3 */}
-          <div>
-            <div className="flex items-baseline gap-16 mb-16">
-              <span className="font-serif text-[72px] text-clay leading-none">03</span>
-              <h3 className="font-serif text-h2">The Reveal</h3>
-            </div>
-            <p className="font-sans text-body text-film-grey ml-[88px]">
-              You get a gallery that looks like a movie of your life.
+          <div className="col-span-4 ml-8">
+            <h3 className="font-serif text-3xl font-semibold mb-6">The Vibe Check</h3>
+            <p className="font-sans text-base font-light leading-[1.8] text-charcoal/80">
+              We strip away the performance. This is where we align on the energy of your day. No forced smiles, just the quiet anticipation of what's real.
             </p>
           </div>
         </div>
-      </div>
 
-      {/* Manifesto Callout Box */}
-      <div className="px-16 md:px-64 mb-96">
-        <div className="md:w-3/5 manifesto-box">
-          <p className="font-serif text-h2 text-center">
-            Be present. We'll handle the proof.
-          </p>
+        {/* Step 02 - Asymmetric Shift */}
+        <div className="grid grid-cols-12 items-start">
+          <div className="col-span-4"></div>
+          <div className="col-span-2 text-right pr-8">
+            <span className="font-serif text-7xl text-clay/40 font-bold leading-none">02</span>
+          </div>
+          <div className="col-span-4">
+            <h3 className="font-serif text-3xl font-semibold mb-6">The Unscripted Day</h3>
+            <p className="font-sans text-base font-light leading-[1.8] text-charcoal/80">
+              I move with the shadows. My presence is felt, not seen. Your only job is to exist within the moment while I document the fragments that others miss.
+            </p>
+          </div>
         </div>
-      </div>
 
-      {/* Closing Statement + CTA */}
-      <div className="px-16 md:px-64">
-        <div className="md:w-2/5">
-          <p className="font-sans text-body mb-48">
-            This isn't for everyone. If you want perfect poses, I'm not for you. But if you want to <span className="italic">attend</span> your own wedding? Let's talk.
-          </p>
-          <Link to="/contact" className="btn-primary inline-block">
+        {/* Step 03 */}
+        <div className="grid grid-cols-12 items-start">
+          <div className="col-span-1"></div>
+          <div className="col-span-2">
+            <span className="font-serif text-7xl text-clay/40 font-bold leading-none">03</span>
+          </div>
+          <div className="col-span-4 ml-8">
+            <h3 className="font-serif text-3xl font-semibold mb-6">The Reveal</h3>
+            <p className="font-sans text-base font-light leading-[1.8] text-charcoal/80">
+              The final gallery is a curated narrative. It's not just a collection of images; it's a tangible archive of your legacy, unfiltered and honest.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Manifesto Callout */}
+      <section className="mb-56">
+        <div className="bg-clay/10 w-full py-32 px-12 flex justify-center">
+          <div className="max-w-xl text-center md:ml-24">
+            <h2 className="font-serif text-4xl italic font-medium leading-relaxed">
+              Be present. We'll handle the proof.
+            </h2>
+          </div>
+        </div>
+      </section>
+
+      {/* Closing Statement & CTA */}
+      <section className="grid grid-cols-12 items-end mb-24">
+        <div className="col-span-12 md:col-span-6">
+          <p className="font-sans text-sm tracking-[0.1em] text-charcoal/60 uppercase mb-4">Final Thought</p>
+          <h4 className="font-sans text-2xl font-light leading-[1.8] max-w-md">
+            This isn't for everyone. It's for the ones who value the grit as much as the grace.
+          </h4>
+        </div>
+        <div className="col-span-12 md:col-span-6 flex justify-end">
+          <Link to="/contact" className="bg-charcoal text-white text-xs uppercase tracking-[0.3em] px-12 py-6 hover:bg-clay transition-all flex items-center gap-4">
             Check Your Date
+            <span className="material-symbols-outlined text-sm">arrow_forward</span>
           </Link>
         </div>
-      </div>
+      </section>
     </div>
   );
 }
